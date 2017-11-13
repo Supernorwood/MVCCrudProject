@@ -24,7 +24,7 @@
 		All Lions: <br>
 		<c:forEach var="lio" items="${list }">
 
-			${lio.id } <a href="info.do?id=	">${lio.name }</a>
+			${lio.id } <a href="info.do?id=" style="color:orange;">${lio.name }</a>
 			<br>
 			<img src="${lio.imageUrl }" width="500px" height="300px">
 
