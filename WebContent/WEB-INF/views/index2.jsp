@@ -24,8 +24,29 @@
 	<p>
 		All Lions: <br>
 		<c:forEach var="lio" items="${list }">
+		<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      ${lio.id } <a href="info.do?id=${lio.id }	" style="color:orange;"><br>${lio.name }</a>
+    </div>
+    <div class="col-sm">
+      <img src="${lio.imageUrl }" width="500px" height="300px">
+      
+    </div>
+    <div class="col-sm" >
+      	<form method="post" action="delete.do">
+				<input type="submit" value="Delete"> <input type="hidden"
+					name="id" value="${lio.id }">
+			</form>
+			<form method="post" action="update.do">
+				<input type="submit" value="Update"> <input type="hidden"
+					name="id" value="${lio.id }">
+			</form>
+    </div>
+  </div>
+</div>
 
-			${lio.id } <a href="info.do?id=" style="color:orange;">${lio.name }</a>
+		<%-- 	${lio.id } <a href="info.do?id=${lio.id }	" style="color:orange;">${lio.name }</a>
 			<br>
 			<img src="${lio.imageUrl }" width="500px" height="300px">
 
@@ -36,7 +57,7 @@
 			<form method="post" action="update.do">
 				<input type="submit" value="Update"> <input type="hidden"
 					name="id" value="${lio.id }">
-			</form>
+			</form> --%>
 
 <%-- ${lio.id } ${lio.name }<br>
 			<img src="${lio.imageUrl }">
