@@ -2,6 +2,7 @@
 
 body { 
     /* The image used */
+    color:orange;
     background-image: url("http://ngm.nationalgeographic.com/wallpaper/img/2013/08/14-hildur-vumbi-lioness-post-mating-infrared_1600.jpg");
 
     /* Full height */
@@ -13,5 +14,10 @@ body {
     background-size: cover;
     background-attachment: fixed;
     
+}
+
+h2 {
+	color: orange;
+	  align-content: center;
 }
 

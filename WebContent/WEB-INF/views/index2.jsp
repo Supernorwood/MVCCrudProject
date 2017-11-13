@@ -10,7 +10,7 @@
 <title>Lions Never Die!!!</title>
 </head>
 <body>
-	<h2>Lions Never Die</h2>
+	<h2><strong>Lions Never Die</strong></h2>
 
 	<form:form action="getLion.do" method="post" modelAttribute="idForm">
 		<form:input path="id" />
