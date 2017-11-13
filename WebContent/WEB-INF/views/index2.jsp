@@ -49,7 +49,7 @@
 </c:if>
  --%>
 	<p>
-		<a href="add.do">Add a Lion</a><br>
+		<a href="add.do" style="color:orange;">Add a Lion</a><br>
 	<!-- 	<img src="https://i.imgur.com/ZUahSbj.gif"
 		width="500px" height="300px"> -->
 	</p> 
