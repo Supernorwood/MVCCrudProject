@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/master.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lions Never Die!!!</title>
+<%@ include file="head.jsp"%>
 </head>
 <body>
 	<h2><strong>Lions Never Die</strong></h2>

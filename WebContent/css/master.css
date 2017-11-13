@@ -2,11 +2,11 @@
 
 body { 
     /* The image used */
+     align-content: center;
     color:orange;
     background-image: url("http://ngm.nationalgeographic.com/wallpaper/img/2013/08/14-hildur-vumbi-lioness-post-mating-infrared_1600.jpg");
 
-    /* Full height */
-    height: 100%; 
+   
 
     /* Center and scale the image nicely */
     background-position: center;

@@ -25,8 +25,8 @@ public class LionDAOInMemoryImpl implements LionDAO{
 	
 	private void loadSampleLions() {
 		lions.put(id, new Lion(id++, "Gregory", "male", "https://i.ytimg.com/vi/BgwSMJ-Tbf8/maxresdefault.jpg"));
-		lions.put(id, new Lion(id++, "Kayle", "female", "http://www.thirteenmonths.com/images/tanzania/tz_inpop/tz_nser_lionkill2_in.jpg"));
-		lions.put(id, new Lion(id++, "Treasure", "female", "https://i.ytimg.com/vi/1Fna-rhmVlw/maxresdefault.jpg"));
+		lions.put(id, new Lion(id++, "Amy", "female", "http://www.thirteenmonths.com/images/tanzania/tz_inpop/tz_nser_lionkill2_in.jpg"));
+		lions.put(id, new Lion(id++, "Charis", "female", "https://i.ytimg.com/vi/1Fna-rhmVlw/maxresdefault.jpg"));
 	}
 	
 	
