@@ -26,7 +26,7 @@
 
 			<a href="info.do?id=${lio.id }	">${lio.name }</a>
 			<br>
-			<img src="${lio.imageUrl }">
+			<img src="${lio.imageUrl }" width="500px" height="300px">
 
 			<form method="post" action="delete.do">
 				<input type="submit" value="Delete"> <input type="hidden"
