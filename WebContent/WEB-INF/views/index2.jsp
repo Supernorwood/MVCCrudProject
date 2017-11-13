@@ -11,18 +11,47 @@
 <%@ include file="head.jsp"%>
 </head>
 <body>
-	<h2><strong>Lions Never Die</strong></h2>
-
-	<form:form action="getLion.do" method="post" modelAttribute="idForm">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm align-self-center">
+      <h2><strong>Lions Never Die</strong></h2>
+      	<form:form action="getLion.do" method="post" modelAttribute="idForm">
 		<form:input path="id" />
 		<form:errors path="id" />
 
 
 		<input type="submit" value="Get a Lion">
+		<br><br>
 	</form:form>
+    </div>
+  </div>
+</div>
+<%-- 	<%@ include file="navbar.jsp"%> --%>
+	<!-- <h2><strong>Lions Never Die</strong></h2> -->
+
+<%-- 	<form:form action="getLion.do" method="post" modelAttribute="idForm">
+		<form:input path="id" />
+		<form:errors path="id" />
+
+
+		<input type="submit" value="Get a Lion">
+	</form:form> --%>
+	<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h4 style="color:orange;">Pride</h4>
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+</div>
 
 	<p>
-		All Lions: <br>
+	
+		<!-- All Lions: <br> -->
 		<c:forEach var="lio" items="${list }">
 		<div class="container">
   <div class="row">
@@ -70,11 +99,13 @@
 	The best giraffe is: ${bestLion}
 </c:if>
  --%>
-	<p>
-		<a href="add.do" style="color:orange;">Add a Lion</a><br>
-	<!-- 	<img src="https://i.imgur.com/ZUahSbj.gif"
-		width="500px" height="300px"> -->
-	</p> 
+ <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm align-self-center">
+     <h3><a href="add.do" style="color:orange;">Add a Lion</a></h3>
+    </div>
+  </div>
+</div>
 
 
 </body>
