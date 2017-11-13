@@ -3,15 +3,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" href="css/master.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lion Removed</title>
 </head>
 <body>
 <h3>${name } Removed</h3>
 	<p>
-		<img src="https://s.blogcdn.com/travel.aol.co.uk/media/2013/05/cibs1.jpg"
-		width="500px" height="300px">
+		<img src="https://thumbs-prod.si-cdn.com/3QtOMOcOcUgwrGes9XmzsCg0c9Y=/fit-in/1072x0/https://public-media.smithsonianmag.com/filer/lions-fighting-Tanzania-7.jpg"
+		width="500px" height="400px">
 	</p>
-<a href="home.do">Home</a>
+<a href="home.do" style="color:orange;">Home</a>
 </body>
 </html>

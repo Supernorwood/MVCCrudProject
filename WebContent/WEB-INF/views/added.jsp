@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" href="css/master.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lion Added</title>
 </head>
@@ -12,7 +13,7 @@ ${lion.gender }<br>
 <img src="${lion.imageUrl }"><br>
 
 <p>
-<a href="home.do">Home</a>
+<a href="home.do" style="color:orange;">Home</a>
 </p>
 
 

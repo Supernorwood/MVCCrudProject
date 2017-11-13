@@ -16,7 +16,7 @@ body {
     
 }
 
-h2 {
+h2, h3 {
 	color: orange;
 	  align-content: center;
 }
