@@ -20,7 +20,7 @@
 		<form:errors path="id" />
 
 
-		<input type="submit" value="Get a Lion">
+		<input type="submit" value="View a Lion">
 		<br><br>
 	</form:form>
     </div>
