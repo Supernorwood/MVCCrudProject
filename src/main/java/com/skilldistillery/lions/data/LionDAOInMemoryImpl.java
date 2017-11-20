@@ -140,7 +140,7 @@ public class LionDAOInMemoryImpl implements LionDAO {
 		try {
 			Connection conn = DriverManager.getConnection(url, user, pass);
 			conn.setAutoCommit(false);
-			String sql = "update lions set id=?, name=? where gender_id=?, where image_id=?";
+			String sql = "update lions set l.id=?, l.nname=? where l.gender_id=?, where image_id=?";
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setInt(1, l.getId());
 			st.setString(2, l.getName());
@@ -162,23 +162,23 @@ public class LionDAOInMemoryImpl implements LionDAO {
 	public Lion deleteLion(Lion l) {
 		// return lions.remove(l.getId());
 		// }
-		Lion lionDelete = null;
+//		Lion lionDelete = null;
 		try {
 			 Connection conn = DriverManager.getConnection(url, user, pass);
 			    conn.setAutoCommit(false);
 			    String sql = "delete from lions where id=?";
 			    PreparedStatement st = conn.prepareStatement(sql);
-			    st.setInt(1, id);
+			    st.setInt(1, l.getId());
 			    st.executeUpdate();
-			    lionDelete = getLionById(id);
 			    
 			    conn.commit();
 			    st.close();
 			    conn.close();
 		}catch(SQLException e) {
 		    e.printStackTrace();
+		    return null; 
 		  }
-		return lionDelete;
+		return l;
 	}
 	
 }

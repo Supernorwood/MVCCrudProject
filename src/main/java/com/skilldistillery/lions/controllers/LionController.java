@@ -36,10 +36,9 @@ public class LionController {
 		mv.addObject("lion", best);
 		return mv;
 	}
-	@RequestMapping("delete.do")
+	@RequestMapping(path="delete.do")
 	public ModelAndView delete(@RequestParam("id") Integer id) {
-		ModelAndView mv = new ModelAndView("deleted");//different view
-	
+		ModelAndView mv = new ModelAndView("WEB-INF/views/deleted.jsp");//different view
 		Lion best = dao.getLionById(id);
 		mv.addObject("name", best.getName());
 		dao.deleteLion(best);
@@ -97,6 +96,17 @@ public class LionController {
 		dao.addLion(lion);
 		mv.setViewName("added");
 		return mv;
+	}
+	@RequestMapping("goToUpdateLion.do")
+	public ModelAndView goToUpdateLion(@RequestParam("id") int id, Model model) {
+		ModelAndView mv = new ModelAndView(); 
+		mv.setViewName("update");
+		Lion l = new Lion(); 
+		
+		Lion toBeUpdated = dao.getLionById(id); 
+		mv.addObject("updateLion", toBeUpdated); 
+		model.addAttribute("lion", l );
+		return mv; 
 	}
 	@RequestMapping(path="updateLion.do", method=RequestMethod.POST)
 	public ModelAndView doUpdate(@Valid Lion lion, Errors e) {

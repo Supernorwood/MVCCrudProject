@@ -67,7 +67,7 @@
 				<input type="submit" value="Delete"> <input type="hidden"
 					name="id" value="${lio.id }">
 			</form>
-			<form method="post" action="update.do">
+			<form method="Get" action="goToUpdateLion.do">
 				<input type="submit" value="Update"> <input type="hidden"
 					name="id" value="${lio.id }">
 			</form>

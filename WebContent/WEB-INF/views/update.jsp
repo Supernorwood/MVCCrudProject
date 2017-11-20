@@ -11,13 +11,14 @@
 <body>
 	<h3>Enter data about your Lion</h3>
 	<form:form action="updateLion.do" method="post" modelAttribute="lion">
-	Name: <form:input path="name" />
+	Name: <form:input value="${updateLion.name}"  path="name" />
 		<form:errors path="name" />
 		<br>
-	Gender: <form:input path="gender" />
+	Gender: <form:input value="${updateLion.gender}" path="gender" />
+	
 		<form:errors path="gender" />
 		<br>
-	Image URL: <form:input path="imageUrl" />
+	Image URL: <form:input value="${updateLion.imageUrl}" path="imageUrl" />
 		<form:errors path="imageUrl" />
 		<br>
 		<form:hidden path="id"/>
