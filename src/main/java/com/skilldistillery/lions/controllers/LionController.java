@@ -38,8 +38,9 @@ public class LionController {
 	}
 	@RequestMapping(path="delete.do")
 	public ModelAndView delete(@RequestParam("id") Integer id) {
-		ModelAndView mv = new ModelAndView("WEB-INF/views/deleted.jsp");//different view
+		ModelAndView mv = new ModelAndView("deleted");//different view
 		Lion best = dao.getLionById(id);
+		System.out.println("id is "+ id + " and my best is " + best);
 		mv.addObject("name", best.getName());
 		dao.deleteLion(best);
 		return mv;

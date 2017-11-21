@@ -26,23 +26,23 @@ public class LionDAOInMemoryImpl implements LionDAO {
 
 	private int id = 1;
 
-	public LionDAOInMemoryImpl() {
-		lions = new HashMap<>();
-		loadSampleLions();
-		try {
-		    Class.forName("com.mysql.jdbc.Driver");
-		  } catch (ClassNotFoundException e) {
-		    e.printStackTrace();
-		    System.err.println("Error loading MySQL Driver!!!");
-		  }
-	}
+//	public LionDAOInMemoryImpl() {
+//		lions = new HashMap<>();
+//		loadSampleLions();
+//		try {
+//		    Class.forName("com.mysql.jdbc.Driver");
+//		  } catch (ClassNotFoundException e) {
+//		    e.printStackTrace();
+//		    System.err.println("Error loading MySQL Driver!!!");
+//		  }
+//	}
 
-	private void loadSampleLions() {
-		lions.put(id, new Lion(id++, "Gregory", "male", "https://i.ytimg.com/vi/BgwSMJ-Tbf8/maxresdefault.jpg"));
-		lions.put(id, new Lion(id++, "Amy", "female",
-				"http://www.thirteenmonths.com/images/tanzania/tz_inpop/tz_nser_lionkill2_in.jpg"));
-		lions.put(id, new Lion(id++, "Charis", "female", "https://i.ytimg.com/vi/1Fna-rhmVlw/maxresdefault.jpg"));
-	}
+//	private void loadSampleLions() {
+//		lions.put(id, new Lion(id++, "Gregory", "male", "https://i.ytimg.com/vi/BgwSMJ-Tbf8/maxresdefault.jpg"));
+//		lions.put(id, new Lion(id++, "Amy", "female",
+//				"http://www.thirteenmonths.com/images/tanzania/tz_inpop/tz_nser_lionkill2_in.jpg"));
+//		lions.put(id, new Lion(id++, "Charis", "female", "https://i.ytimg.com/vi/1Fna-rhmVlw/maxresdefault.jpg"));
+//	}
 
 	@Override
 	public Lion addLion(Lion l) {
@@ -113,7 +113,7 @@ public class LionDAOInMemoryImpl implements LionDAO {
 		Lion lion = null;
 		try {
 			Connection conn = DriverManager.getConnection(url, user, pass);
-			String sql = "SELECT id , name, description FROM lions WHERE id = ?";
+			String sql = "SELECT id , name, gender_id, image_id FROM lions WHERE id = ?";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
@@ -121,7 +121,8 @@ public class LionDAOInMemoryImpl implements LionDAO {
 				id = rs.getInt(1);
 				String name = rs.getString(2);
 				String gender = rs.getString(3);
-				lion = new Lion(id, name, gender);
+				String imageUrl = rs.getString(4);
+				lion = new Lion(id, name, gender, imageUrl);
 			}
 			rs.close();
 			stmt.close();
@@ -140,7 +141,7 @@ public class LionDAOInMemoryImpl implements LionDAO {
 		try {
 			Connection conn = DriverManager.getConnection(url, user, pass);
 			conn.setAutoCommit(false);
-			String sql = "update lions set l.id=?, l.nname=? where l.gender_id=?, where image_id=?";
+			String sql = "update lions set id=?, name=? where gender_id=?, where image_id=?";
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setInt(1, l.getId());
 			st.setString(2, l.getName());
