@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `lions` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `gender_id` VARCHAR(45) NOT NULL,
-  `image_id` VARCHAR(50000) NULL,
+  `image_id` TEXT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
